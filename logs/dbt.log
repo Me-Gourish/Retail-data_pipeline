@@ -1,0 +1,180 @@
+[0m19:22:08.177663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E2D0BC1160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E2D2CF3B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E2D2CF3ED0>]}
+
+
+============================== 19:22:08.190898 | ade7f851-7c82-4ced-a8e7-493521cce666 ==============================
+[0m19:22:08.190898 [info ] [MainThread]: Running with dbt=1.11.8
+[0m19:22:08.192495 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\gouri\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init dbt_project', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m19:22:08.290058 [debug] [MainThread]: Starter project path: D:\retail-data-pipeline\venv\Lib\site-packages\dbt\include\starter_project
+[0m19:22:08.370918 [info ] [MainThread]: 
+Your new dbt project "dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:22:08.373031 [info ] [MainThread]: Setting up your profile.
+[0m19:22:17.243520 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m19:22:17.244264 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m19:22:17.244860 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m19:25:24.610431 [error] [MainThread]: Encountered an error:
+
+[0m19:25:24.772695 [error] [MainThread]: Traceback (most recent call last):
+  File "D:\retail-data-pipeline\venv\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "D:\retail-data-pipeline\venv\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "D:\retail-data-pipeline\venv\Lib\site-packages\dbt\cli\main.py", line 488, in init
+    results = task.run()
+  File "D:\retail-data-pipeline\venv\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "D:\retail-data-pipeline\venv\Lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\retail-data-pipeline\venv\Lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\retail-data-pipeline\venv\Lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "D:\retail-data-pipeline\venv\Lib\site-packages\dbt\task\init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ~~~~~~~~~~~~^
+        text, default=default, hide_input=hide_input, type=type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\retail-data-pipeline\venv\Lib\site-packages\click\termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+  File "D:\retail-data-pipeline\venv\Lib\site-packages\click\termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m19:25:24.873877 [debug] [MainThread]: Command `dbt init` failed at 19:25:24.864110 after 197.29 seconds
+[0m19:25:24.893606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E2E62596E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E2E4B9BE30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E2E621CAF0>]}
+[0m19:25:24.903092 [debug] [MainThread]: Flushing usage events
+[0m19:28:29.815900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351BDA9160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351E0ABED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351E0AB9D0>]}
+
+
+============================== 19:28:29.824955 | b0069ddc-7ad2-4a29-a8ee-d8260d543cd1 ==============================
+[0m19:28:29.824955 [info ] [MainThread]: Running with dbt=1.11.8
+[0m19:28:29.825960 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\gouri\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init dbt_project', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m19:28:29.882453 [debug] [MainThread]: Starter project path: D:\retail-data-pipeline\venv\Lib\site-packages\dbt\include\starter_project
+[0m19:28:29.940246 [info ] [MainThread]: 
+Your new dbt project "dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:28:29.941398 [info ] [MainThread]: Setting up your profile.
+[0m19:28:34.386291 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m19:28:34.387414 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m19:28:34.387960 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m19:30:10.931891 [info ] [MainThread]: Profile dbt_project written to C:\Users\gouri\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m19:30:10.959306 [debug] [MainThread]: Command `dbt init` succeeded at 19:30:10.958110 after 101.35 seconds
+[0m19:30:10.964119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013531529480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001352FF98A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000135314F08D0>]}
+[0m19:30:10.967123 [debug] [MainThread]: Flushing usage events
+[0m19:30:12.687847 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:30:29.356702 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029845299160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000298475BFED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000298475BF9D0>]}
+
+
+============================== 19:30:29.365180 | 25c81174-5f10-41f1-a618-e50f340ec511 ==============================
+[0m19:30:29.365180 [info ] [MainThread]: Running with dbt=1.11.8
+[0m19:30:29.366150 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\gouri\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m19:30:29.419911 [info ] [MainThread]: dbt version: 1.11.8
+[0m19:30:29.420940 [info ] [MainThread]: python version: 3.13.5
+[0m19:30:29.421792 [info ] [MainThread]: python path: D:\retail-data-pipeline\venv\Scripts\python.exe
+[0m19:30:29.422536 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m19:30:29.428541 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m19:30:29.434996 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.databricks'
+[0m19:30:31.392619 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m19:30:31.393278 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m19:30:31.393748 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m19:30:31.490559 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.duckdb'
+[0m19:30:31.491390 [info ] [MainThread]: Using profiles dir at C:\Users\gouri\.dbt
+[0m19:30:31.492025 [info ] [MainThread]: Using profiles.yml file at C:\Users\gouri\.dbt\profiles.yml
+[0m19:30:31.492674 [info ] [MainThread]: Using dbt_project.yml file at D:\retail-data-pipeline\dbt_project.yml
+[0m19:30:31.493436 [info ] [MainThread]: Configuration:
+[0m19:30:31.493927 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m19:30:31.494746 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m19:30:31.495491 [info ] [MainThread]: Required dependencies:
+[0m19:30:31.496287 [debug] [MainThread]: Executing "git --help"
+[0m19:30:31.512585 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m19:30:31.513686 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m19:30:31.515287 [info ] [MainThread]: [31m3 checks failed:[0m
+[0m19:30:31.516178 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "Sales_DBT_project", target "dev" invalid: Runtime Error
+    Could not find adapter type duckdb!
+
+Runtime Error
+  Credentials in profile "dbt_proj", target "dev" invalid: Runtime Error
+    Could not find adapter type databricks!
+
+Runtime Error
+  Credentials in profile "local_duckdb_project", target "dev" invalid: Runtime Error
+    Could not find adapter type duckdb!
+
+
+[0m19:30:31.516794 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <D:\retail-data-pipeline\dbt_project.yml> not found
+
+[0m19:30:31.517389 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m19:30:31.519211 [debug] [MainThread]: Command `dbt debug` failed at 19:30:31.519028 after 2.46 seconds
+[0m19:30:31.519751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002985AA33360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002985AA6EF90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002985AA08AF0>]}
+[0m19:30:31.520588 [debug] [MainThread]: Flushing usage events
+[0m19:30:33.296542 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:32:53.076898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7ED4D9160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7EE81FED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7EE81F9D0>]}
+
+
+============================== 19:32:53.088491 | a01d9654-5cc8-40f3-954b-a5812e99e8ec ==============================
+[0m19:32:53.088491 [info ] [MainThread]: Running with dbt=1.11.8
+[0m19:32:53.089499 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\gouri\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init dbt_project', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m19:32:53.149411 [debug] [MainThread]: Starter project path: D:\retail-data-pipeline\venv\Lib\site-packages\dbt\include\starter_project
+[0m19:32:53.179172 [info ] [MainThread]: 
+Your new dbt project "dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:32:53.179943 [info ] [MainThread]: Setting up your profile.
+[0m19:33:05.148918 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m19:33:05.149592 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m19:33:05.149961 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m19:33:43.374913 [info ] [MainThread]: Profile dbt_project written to C:\Users\gouri\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m19:33:43.381783 [debug] [MainThread]: Command `dbt init` succeeded at 19:33:43.381272 after 50.55 seconds
+[0m19:33:43.383850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7FFCE5480>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7EFCEE7B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E7FFCB48D0>]}
+[0m19:33:43.385354 [debug] [MainThread]: Flushing usage events
+[0m19:33:45.232154 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,11 @@
+{{ config(materialized='view') }}
+
+SELECT
+    order_id,
+    customer_id,
+    product_id,
+    quantity,
+    order_date
+FROM retail_db.raw.orders
+
+
